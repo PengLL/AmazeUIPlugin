@@ -23,11 +23,11 @@ PS: 如果不需要图片下面的文字部分。可以删除class为am-modal-te
 
 	PS:项目的Js基于jQuery，所以引入Js之前请先引入jQuery
 
-3. ####通过jQuery选择需要添加效果的元素，添加addModal方法方法参数
+3. ####通过jQuery选择需要添加效果的元素，添加addModal方法he方法参数
 	- src: 弹出图片的路径(必需)
 	- text: 图片底部的文字 非必需
 	- scale: 如果图片过大，会根据此参数进行缩小
 	
-##例如：$(element).addModal({src:"images/beauty.jpg",text:"图片描述文字"});
+####例如：$(element).addModal({src:"images/beauty.jpg",text:"图片描述文字"});
 
 
