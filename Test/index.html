@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AmazeUI模态框测试</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/AmazeUIModal.css">
+	<style type="text/css">
+	    html,body
+	    {
+	    	height: 100%;
+	    	margin: 0;
+	    	padding: 0;
+	    }
+	  	body
+	  	{
+	  		background-color: rgb(3,101,100);
+	  	}
+		#show
+		{
+			
+			font-weight: bold;
+			font-size: 18px;
+			text-align: center;
+			margin: 0 auto;
+			margin-top: 80px;
+			color: #fff;
+		}
+		img
+		{
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+<div class="test">
+	<div id="show">
+		<p>点击图片，查看演示</p>
+		<img id="item1" src="images/1.jpg">
+		<img id="item2" src="images/2.jpg">
+		<img id="item3" src="images/3.jpg">
+	</div>
+</div>	
+	<div class="am-modal">
+		<div class="am-modal-mask"></div>
+		<div class="am-modal-bd">
+		    <button class="am-modal-close">X</button>
+			<div><canvas id="am-modal-cvs"></canvas></div>
+			<div class="am-modal-text"></div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery-3.0.0.js"></script>
+<script type="text/javascript" src="js/AmazeUIModal.js"></script>
+<script type="text/javascript">
+	$("#item1").addModal({src:"images/big1.jpg",text:"氢气球"});
+	$("#item2").addModal({src:"images/big2.jpg",text:"咖啡"});
+	$("#item3").addModal({src:"images/big3.jpg",text:"科比"});
+</script>
+</html>

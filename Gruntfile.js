@@ -17,12 +17,12 @@ module.exports=function(grunt){
     		options:{
     			jshintrc:'.jshintrc'
     		},
-    		build:['Gruntfile.js','src/js/*.js']
+    		build:['Gruntfile.js','Test/js/*.js']
     	},
     	// watch插件配置信息
     	watch:{
     		build:{
-    			files:['src/js/*.js','src/css/*.css'],
+    			files:['Test/js/*.js','Test/css/*.css'],
     			tasks:['jshint','uglify','cssmin','csscomb'],
     			options:{spawn:false}
     		}
@@ -35,7 +35,7 @@ module.exports=function(grunt){
 	      },
 	      build: {
 	      	files:{
-	      		'build/js/AmazeUIModal.min.js':['src/js/test.js']
+	      		'build/js/AmazeUIModal.min.js':['Test/js/AmazeUIModal.js']
 	      	} 
 	      }
     	},
@@ -48,7 +48,7 @@ module.exports=function(grunt){
 			},
 			build: {
 			    files: {
-			      'build/css/AmazeUIModal.min.css': ['src/css/*.css']
+			      'build/css/AmazeUIModal.min.css': ['Test/css/*.css']
 			    }
  			}
     	},
@@ -56,17 +56,17 @@ module.exports=function(grunt){
     	csscomb: {
         	bulid: {
 	            files:{
-	            	"src/dest/css/AmazeUIModal.restored.css":["src/css/AmazeUIModal.css"]
+	            	"Test/dest/css/AmazeUIModal.restored.css":["Test/css/AmazeUIModal.css"]
 	            }
 	        }
     	}
 	});
 	// 加载包含任务的插件
   	grunt.loadNpmTasks('grunt-contrib-uglify');
-  	grunt.loadNpmTasks('grunt-contrib-jshint');
+  	//grunt.loadNpmTasks('grunt-contrib-jshint');
   	grunt.loadNpmTasks('grunt-contrib-watch');
   	grunt.loadNpmTasks('grunt-contrib-cssmin');
   	grunt.loadNpmTasks('grunt-csscomb');
   	// 默认被执行的任务列表。
-  	grunt.registerTask('default', ['jshint','uglify','cssmin','csscomb','watch']);
+  	grunt.registerTask('default', ['uglify','cssmin','csscomb','watch']);
 };
