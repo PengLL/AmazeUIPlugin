@@ -27,7 +27,8 @@ PS: 如果不需要图片下面的文字部分。可以删除class为am-modal-te
 	- src: 弹出图片的路径(必需)
 	- text: 图片底部的文字 (非必需)
 	- scale: 如果图片过大，会根据此参数相对屏幕进行缩小 (非必需)
+	- top: 弹出的图片和顶部的距离，如 50+"px"
 	
-####例如：$(element).addModal({src:"images/beauty.jpg",text:"图片描述文字"});
+####例如：$(element).addModal({src:"images/beauty.jpg",text:"图片描述文字",top:100+"px"});
 
 
