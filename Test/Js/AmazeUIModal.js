@@ -20,7 +20,8 @@
 		 	var defaults={
 			 	src:"",
 			 	scale:0.85,
-			 	text:"this is image's text"
+			 	text:"this is image's text",
+			 	top:50+"px"
 		 	};
 		 	
 		 	// use user's option to cover the defaults
@@ -38,7 +39,8 @@
 			 	 	img=scalePic(img); 	 
 			 	 	$(".am-modal-bd").css({
 			 	 	 	width:img.width,
-			 	 	 	marginLeft:-img.width/2
+			 	 	 	marginLeft:-img.width/2,
+			 	 	 	top:options.top
 			 	 	}) 
 			 	 	cvs.width=img.width;
 			 	 	cvs.height=img.height;
