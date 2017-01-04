@@ -32,3 +32,4 @@ PS: 如果不需要图片下面的文字部分。可以删除class为am-modal-te
 ####例如：$(element).addModal({src:"images/beauty.jpg",text:"图片描述文字",top:100+"px"});
 
 
+##test pull request
